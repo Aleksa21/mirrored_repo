@@ -7,6 +7,9 @@
 node_modules/
 dist/
 
+#build artifacts
+build/
+
 # Compiled Java class files
 *.class
 

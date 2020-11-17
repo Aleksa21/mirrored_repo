@@ -1,0 +1,17 @@
+idf_component_register(SRCS "main.cc"
+							"../util/esp_util.cc"
+							"../util/fields.cc"
+							"../util/peripherals.cc"
+							"../ble/ble.cc"
+							"../ble/ble_server.cc"
+							"../ble/ble_uart_server.c"
+							"../wifi/wifi_setup.c"
+							"../wifi/tcp_server.cc"
+							"../wifi/tcp.cc"
+							"../serial/uart.cc"
+                    INCLUDE_DIRS "../ble"
+                    			 "../wifi"
+                    			 "../serial"
+                    			 "../util"
+                    			 "../main")
+                    			 

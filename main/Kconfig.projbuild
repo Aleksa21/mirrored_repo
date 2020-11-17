@@ -1,0 +1,64 @@
+menu "BLE GATT SERVER Config"
+
+    config BLE_DEVICE_NAME
+        string "BLE Server name"
+        default "Esp32_Device_"
+        help
+            BLE server name. Last two values of the mac adress get appended, before making the final name.
+
+endmenu
+
+menu "Wi-Fi Config"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) to connect to.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2).
+
+    config ESP_MAXIMUM_RETRY
+        int "Maximum retry"
+        default 5
+        help
+            Set the Maximum retry to avoid station reconnecting to the AP unlimited when the AP is really inexistent.
+endmenu
+
+menu "TCP Server Config"
+
+    config TCP_PORT
+        int "TCP Server listen port"
+        default 3333
+        help
+            Port on which TCP Server listens for Clients
+            
+endmenu
+
+menu "UART Config"
+
+    config UART_BAUD_RATE
+        int "Baud rate"
+        default 115200
+        help
+            Baud rate of the UART
+            
+    config UART_TX_GPIO
+        int "Uart tx gpio"
+        default 4
+        help
+            Tx gpio of the UART
+
+    config UART_RX_GPIO
+        int "Uart rx gpio"
+        default 5
+        help
+            Rx gpio of the UART
+
+endmenu
+
+
